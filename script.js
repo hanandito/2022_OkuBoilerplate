@@ -31,19 +31,26 @@ gsap.to('section.grey .text', {
   }
 });
 
+
 gsap.from("section.red .text", {
   x: -500,
   opacity: 0,
   scrollTrigger: {
     trigger: "section.red",
-    start:"top 50%",     
+    start:"top bottom",     
     toggleActions: "play none none reset",
-    // markers:true
   },
 });
 
-
-
+const section = document.querySelector('section');
+gsap.to('section.parallax img', { 
+ScrollTrigger:{
+    trigger: section,
+    start: "top top", 
+    pin: true, 
+    pinSpacing: false 
+  }
+});
 
 
 // Only necessary to correct marker position - not needed in production
@@ -74,19 +81,19 @@ gsap.registerPlugin(ScrollTrigger);
       },
     });
   }
-};S
+};;
+		
+		gsap.utils.toArray(".section-parallax .parallax-content").forEach((section, i) => {
+          const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
 
-function parallax() {
-	var $slider = document.getElementById("slider");
-
-	var yPos = window.pageYOffset / $slider.dataset.speed;
-	yPos = -yPos;
-	
-	var coords = '0% '+ yPos + 'px';
-	
-	$slider.style.backgroundPosition = coords;
-}
-
-window.addEventListener("scroll", function(){
-	parallax();	
-});
+      gsap.fromTo(section,{ 
+        y: -heightDiff
+      }, {
+        scrollTrigger: {
+          trigger: section.parentElement,
+          scrub: true
+        },
+        y: 0,
+        ease: "none"
+      });
+		});

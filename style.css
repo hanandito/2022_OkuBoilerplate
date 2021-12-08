@@ -42,6 +42,7 @@ section.green {
 
 section.grey {
   background: grey;
+  height: 100vh;
 }
 
 section.red {
@@ -75,19 +76,33 @@ section.red {
   display: flex;
   align-items: center;
   justify-content: center;
+}.page-header {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 }
 
-#slider {
-	background-image: url('https://unsplash.it/800/800');
+.section-parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.parallax-content {
+  background-size: cover;
+	position: relative;
+	background-position: center;
 	background-repeat: no-repeat;
-	height: 600px;
-	width: 100%;
-	max-width: 100%;
-	background-size: cover;
-	margin: 40px auto 0;
-	transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0); /* Safari */
-    -moz-transform: translate3d(0,0,0); /* Firefox */
-    -ms-transform: translate3d(0,0,0); /* IE */
-    -o-transform: translate3d(0,0,0);
+  width: 100%;
+	height: 120%;
+}
+
+.section {
+  background-color: #111111;
+}
+
+.section-mood-image {
+  margin-top: 80px;
+  height: 70vh;
 }
