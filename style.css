@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+body { 
+  font-family: "Signika Negative", sans-serif;
+  
+  margin: 0;
+  padding: 0;
+  
+  height: 100%;
+  width: 100%;
+  
+  overflow: hidden;
+}
+
+.scroller {
+  height: 100vh;
+  background: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section .heading {
+  position: relative;
+  margin: auto;
+  color: darkgoldenrod;
+  font-size: 2.5em;
+}
+
+section .text {
+  position: relative;
+  margin: auto;
+  color: white;
+  font-size: 2em;
+}
+
+section.green {
+  background: lightblue;
+}
+
+section.grey {
+  background: grey;
+}
+
+section.red {
+  background: steelblue;
+}
+.process-wrap {
+  overflow: hidden;
+}
+
+.process {
+  width: 300%;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-item-align: center;
+  align-self: center;
+  height: 100vh !important;
+}
+.process__item {
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+.process__item span {
+  font-size: 30px;
+  display: block;
+}
+
+.empty {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slider {
+	background-image: url('https://unsplash.it/800/800');
+	background-repeat: no-repeat;
+	height: 600px;
+	width: 100%;
+	max-width: 100%;
+	background-size: cover;
+	margin: 40px auto 0;
+	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0); /* Safari */
+    -moz-transform: translate3d(0,0,0); /* Firefox */
+    -ms-transform: translate3d(0,0,0); /* IE */
+    -o-transform: translate3d(0,0,0);
+}
